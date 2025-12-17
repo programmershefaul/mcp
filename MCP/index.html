@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>MCP</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- ================= CSS ================= -->
+  <style>
+    /* ===== RESET ===== */
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    body{
+      background: linear-gradient(135deg,#0f2027,#203a43,#2c5364);
+      color:#fff;
+      scroll-behavior:smooth;
+    }
+
+    a{ text-decoration:none; color:white; }
+
+    /* ===== NAVBAR ===== */
+    nav{
+      position:fixed;
+      top:0; left:0;
+      width:100%;
+      background:rgba(0,0,0,0.6);
+      backdrop-filter: blur(8px);
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      padding:15px 40px;
+      z-index:1000;
+    }
+
+    nav .logo{
+      font-size:28px;
+      font-weight:800;
+      color:#00eaff;
+    }
+
+    nav ul{
+      list-style:none;
+      display:flex;
+      gap:25px;
+    }
+
+    nav ul li a:hover{
+      color:#00eaff;
+    }
+
+    /* ===== HERO ===== */
+    .hero{
+      height:100vh;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      text-align:center;
+      flex-direction:column;
+      padding:20px;
+    }
+
+    .hero h1{
+      font-size:60px;
+      margin-bottom:15px;
+    }
+
+    .hero span{
+      color:#00eaff;
+    }
+
+    .hero p{
+      max-width:650px;
+      opacity:0.9;
+      margin-bottom:30px;
+    }
+
+    .btn{
+      padding:14px 30px;
+      border-radius:30px;
+      background:#00eaff;
+      color:#000;
+      font-weight:bold;
+      border:none;
+      cursor:pointer;
+      transition:0.3s;
+    }
+
+    .btn:hover{ transform:scale(1.1); }
+
+    /* ===== SECTION ===== */
+    section{
+      padding:100px 50px;
+      min-height:100vh;
+    }
+
+    h2{
+      font-size:42px;
+      text-align:center;
+      margin-bottom:20px;
+    }
+
+    .subtitle{
+      text-align:center;
+      max-width:700px;
+      margin:auto;
+      opacity:0.85;
+      margin-bottom:50px;
+    }
+
+    /* ===== ABOUT ===== */
+    .about-box{
+      max-width:900px;
+      margin:auto;
+      background:rgba(255,255,255,0.08);
+      padding:40px;
+      border-radius:20px;
+      line-height:1.8;
+    }
+
+    /* ===== TEAM ===== */
+    .team{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+      gap:30px;
+    }
+
+    .card{
+      background:#fff;
+      color:#000;
+      border-radius:20px;
+      padding:25px;
+      text-align:center;
+      transition:0.3s;
+    }
+
+    .card:hover{ transform:translateY(-10px); }
+
+    .card img{
+      width:120px;
+      height:120px;
+      border-radius:50%;
+      margin-bottom:15px;
+    }
+
+    /* ===== SERVICES ===== */
+    .services{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+      gap:25px;
+    }
+
+    .service{
+      background:rgba(0,0,0,0.5);
+      padding:30px;
+      border-radius:18px;
+    }
+
+    /* ===== CONTACT ===== */
+    .contact-form{
+      max-width:450px;
+      margin:auto;
+      display:flex;
+      flex-direction:column;
+      gap:15px;
+    }
+
+    input,textarea{
+      padding:12px;
+      border-radius:10px;
+      border:none;
+    }
+
+    textarea{ height:120px; }
+
+    /* ===== FOOTER ===== */
+    footer{
+      background:#000;
+      text-align:center;
+      padding:25px;
+    }
+
+    /* ===== RESPONSIVE ===== */
+    @media(max-width:768px){
+      .hero h1{ font-size:40px; }
+      nav{ padding:15px 20px; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ================= NAVBAR ================= -->
+<nav>
+  <div class="logo">MCP</div>
+  <ul>
+    <li><a href="#home">Home</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#team">Team</a></li>
+    <li><a href="#services">Services</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
+
+<!-- ================= HOME ================= -->
+<section class="hero" id="home">
+  <h1>We are <span>MCP</span></h1>
+  <p>Modern Creative Programmers – where innovation, creativity and logic meet together.</p>
+  <button class="btn" onclick="scrollToSection('contact')">Hire Us</button>
+</section>
+
+<!-- ================= ABOUT ================= -->
+<section id="about">
+  <h2>About MCP</h2>
+  <p class="subtitle">A passionate team of developers and designers</p>
+  <div class="about-box">
+    MCP is a creative development team focused on building modern, colorful and user-friendly
+    digital solutions. We believe in clean code, strong logic and beautiful design.
+  </div>
+</section>
+
+<!-- ================= TEAM ================= -->
+<section id="team">
+  <h2>Our Team</h2>
+  <p class="subtitle">Meet the brains behind MCP</p>
+  <div class="team">
+    <div class="card"><img src="./images/tonmoy.JPG"><h3>Tonmoy</h3><p>Chairman</p></div>
+    <div class="card"><img src="./images/shefaul.PNG"><h3>Shefaul</h3><p>Ex-CEO</p></div>
+  <div class="card"><img src="./images/ayon.PNG"><h3>Ayon</h3><p>Member</p></div>
+    <div class="card"><img src="./images/sagor.PNG"><h3>Sagor</h3><p>Member</p></div>
+    <div class="card"><img src="./images/rifat.PNG"><h3>Rifat</h3><p>Member</p></div>
+    <div class="card"><img src="./images/mursalin.PNG"><h3>Mursalin</h3><p>Ex-Member</p></div>
+  </div>
+</section>
+
+<!-- ================= SERVICES ================= -->
+<section id="services">
+  <h2>Services</h2>
+  <p class="subtitle">What we offer</p>
+  <div class="services">
+    <div class="service">Gaming</div>
+    <div class="service">Expert Programmers</div>
+    <div class="service">Problem Solving</div>
+  </div>
+</section>
+
+<!-- ================= CONTACT ================= -->
+<section id="contact">
+  <h2>Contact Us</h2>
+  <p class="subtitle">Let's build something great</p>
+  <form class="contact-form" onsubmit="sendMessage(event)">
+    <input type="text" placeholder="Your Name" required>
+    <input type="email" placeholder="Your Email" required>
+    <textarea placeholder="Message"></textarea>
+    <button class="btn">Send Message</button>
+  </form>
+</section>
+
+<footer>
+  © 2025 MCP | Md. Shefaul Hassn_1830
+</footer>
+
+<!-- ================= JAVASCRIPT ================= -->
+<script>
+  function scrollToSection(id){
+    document.getElementById(id).scrollIntoView({behavior:'smooth'});
+  }
+
+  function sendMessage(e){
+    e.preventDefault();
+    alert('Message sent successfully!');
+  }
+
+  // Simple animation effect
+  window.addEventListener('scroll',()=>{
+    document.querySelectorAll('section').forEach(sec=>{
+      const top = window.scrollY;
+      const offset = sec.offsetTop - 500;
+      if(top > offset){ sec.style.opacity = 1; }
+    })
+  })
+</script>
+
+</body>
+</html>
